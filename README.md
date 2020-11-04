@@ -239,7 +239,7 @@ After completing the Flash write process for flash the firmware files, the host 
         - Copy the all the hex values and paste in a text file. 
         - Replace the existing text file in the project with this new text file. 
 
-## Guidelines to the end users
+# Guidelines to the end users
                                   
 -	The user needs to consider taking adequate backup of the existing firmware running on the controller. The demo application erases the current firmware and update it with the newly flashed firmware. 
 -	Flashing the demo application to the host MCU will remove the existing application that resides in the MCU. The DFU Demo application showcases a proof-of-concept example that update the firmware on the BLE module. User needs to modify according to their requirement. 
