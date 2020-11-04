@@ -151,6 +151,9 @@ After completing the Flash write process for flash the firmware files, the host 
 </p>
 
 ## DFU Demo Application
+
+* NOTE: The stand alone demo application is attached as a zipped folder in the repository. 
+
    The embedded MPlabx application is created that implements the firmware update in the RN4870/1 and BM70/71 PICtail board using the host MCU which follows the device firmware update protocol. The Explorer 16/32 development Board with the PIC32MX795F512L is used as the host MCU.
                 
    The DFU Demo application project runs on supported Microchip development hardware noted in the Hardware Combinations section below. Pre-generated hex file for PIC32 ‘DFU_Demo.X.production.hex’ is available in the ‘\Applications\DFU_Demo\Precompiled_HEX’ folder.
@@ -218,7 +221,7 @@ After completing the Flash write process for flash the firmware files, the host 
         - The multiple firmware files can be converted to single hex file using the Merging tool.
                -  The merging tool PreMPTool_new is located at: Host_DFU_RN-BM\Merging Tool
 	       -  Select the multiple hex files as the input file and genarate single output file.
-     2) Convert the HEX values to Binary file 
+     2) To convert the HEX values to Binary file 
         The Atmel Studio has a avr-objcopy.exe utility. By using this tool we can convert the previously merged single HEX file to binary file
 	
           1) Go to the location 
