@@ -143,7 +143,7 @@ After completing the Flash write process for flash the firmware files, the host 
 <img src="https://user-images.githubusercontent.com/57740485/98065971-b156d280-1e7b-11eb-82d0-987e7d2b67bf.png" width=480>
 </p>
 
-##Programming Sequence
+## Programming Sequence
          		 The demo application implements the firmware update protocol by incorporating the data into packets which creates the data and command packets as described in the Host Controller Interface specifications. The event response from the device is then monitored by the host to check on the status notification send back from the device. The programming sequence of the demo application is described in below diagram
 
 <p align="center">
