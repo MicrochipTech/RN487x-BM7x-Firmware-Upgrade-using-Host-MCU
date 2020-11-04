@@ -217,15 +217,16 @@ After completing the Flash write process for flash the firmware files, the host 
      1) Merge multiple hex files to sing hex file
         - The multiple firmware files can be converted to single hex file using the Merging tool.
                -  The merging tool PreMPTool_new is located at: Host_DFU_RN-BM\Merging Tool
-	       -  Select the multiple hex files as the input file.
+	       -  Select the multiple hex files as the input file and genarate single output file.
      2) Convert the HEX values to Binary file 
         The Atmel Studio has a avr-objcopy.exe utility. By using this tool we can convert the previously merged single HEX file to binary file
-                 1) Go to the location 
-	            - C:\Program Files (x86)\Atmel\Studio\7.0\toolchain\avr8\avr8-gnu-toolchain\bin\
-                 2) Open command prompt by typing "cmd" at the file path
-                 3) Execute the avr-objcopy.exe application in command prompt along with the parameters.
-		    - avr-objcopy.exe -I ihex <path>filename.HEX -O binary <path>Hex2Binary.bin
-	         4) After successful execution, a Hex2Binary.bin file will get generated
+	
+          1) Go to the location 
+	       - C:\Program Files (x86)\Atmel\Studio\7.0\toolchain\avr8\avr8-gnu-toolchain\bin\
+          2) Open command prompt by typing "cmd" at the file path
+          3) Execute the avr-objcopy.exe application in command prompt along with the parameters.
+	         - avr-objcopy.exe -I ihex filename.HEX -O binary Hex2Binary.bin
+          4) After successful execution, a Hex2Binary.bin file will get generated
   
           - The avr-objcopy.exe utility or any similar tool that achieve the similar functionality can be used to convert the HEX values to binary file. 
      3) Convert single binary file to a C array
