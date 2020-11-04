@@ -208,13 +208,26 @@ After completing the Flash write process for flash the firmware files, the host 
 ## Replacing the Firmware text file                         
 
 * The default application will have the latest public released firmware (V1.40). 
-* 	User can use the same application to flash the older or newer version of firmware my replacing the firmware file (text file) that comes along with the application. 
+* 	User can use the same application to flash the older or newer version of firmware my replacing the firmware file (rn487x.txt) that comes along with the application.
+
+      - In the MPLAB project, The firmware file (rn487x.txt) is located at Host_DFU_RN-BM\PIC32_NVM\Applications\DFU_Demo 
+      
 * 	Ready to flash web released RN firmware is available in multiple files. 
 * 	The firmware file is then converted into single test file, by using the below steps. 
      1) Merge multiple hex files to sing hex file
-        - The multiple firmware files can be converted to single hex file using the HexMerge tool.
+        - The multiple firmware files can be converted to single hex file using the Merging tool.
+               -  The merging tool PreMPTool_new is located at: Host_DFU_RN-BM\Merging Tool
+	       -  Select the multiple hex files as the input file.
      2) Convert the HEX values to Binary file 
-        - The avr-objcopy.exe utility or any other tool that achieve the similar functionality can be used to convert the HEX values to binary file. 
+        The Atmel Studio has a avr-objcopy.exe utility. By using this tool we can convert the previously merged single HEX file to binary file
+                 1) Go to the location 
+	            - C:\Program Files (x86)\Atmel\Studio\7.0\toolchain\avr8\avr8-gnu-toolchain\bin\
+                 2) Open command prompt by typing "cmd" at the file path
+                 3) Execute the avr-objcopy.exe application in command prompt along with the parameters.
+		    - avr-objcopy.exe -I ihex <path>filename.HEX -O binary <path>Hex2Binary.bin
+	         4) After successful execution, a Hex2Binary.bin file will get generated
+  
+          - The avr-objcopy.exe utility or any similar tool that achieve the similar functionality can be used to convert the HEX values to binary file. 
      3) Convert single binary file to a C array
         - The reference online tool can be used to convert the binary file to C array. 
         - Tool to Convert binary to c header file 
