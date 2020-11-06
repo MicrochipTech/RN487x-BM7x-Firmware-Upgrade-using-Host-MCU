@@ -1,4 +1,6 @@
 # RN487x-BM7x-Firmware-Upgrade-using-Host-MCU
+> "Wireless Made Easy!" - Firmware upgrade for RN and BM devices using host MCU over UART
+
 
 ## Introduction
 The general firmware update process in the RN4870/1 and BM70/71 PICtail board is carried out using an isupdate flashing tool. The instruction guide for the RN and BM devices discusses in detail about the firmware flashing using the system based flashing tool. Based on Microchip’s continuous improvement policy we are focused on collecting the feedback from the customers, to fulfill the field requirements to make the product more reliable to the end users. Taking into consideration about few practical requirements that demand for an embedded application to execute firmware update for these devices, we have developed an alternative solution to execute firmware update for the controller devices.
