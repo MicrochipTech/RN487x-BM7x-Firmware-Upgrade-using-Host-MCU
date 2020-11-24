@@ -1,6 +1,21 @@
 # RN487x-BM7x-Firmware-Upgrade-using-Host-MCU
 > "Wireless Made Easy!" - Firmware upgrade for RN and BM devices using host MCU over UART
 
+# Guidelines to the end users
+                                  
+-	The user needs to consider taking adequate backup of the existing firmware running on the controller. The demo application erases the current firmware and update it with the newly flashed firmware. 
+-	Flashing the demo application to the host MCU will remove the existing application that resides in the MCU. The DFU Demo application showcases a proof-of-concept example that update the firmware on the BLE module. User needs to modify according to their requirement. 
+
+- The application flow is designed in such a way that it writes the firmware content into the flash memory and read back the content to make sure the writing action is executed successfully. The CRC check is not implemented either at the host MCU side nor at the BLE controller part to check whether the firmware is corrupted. 
+
+
+- Updating the existing firmware resides at the BLE controller will erase the configuration content (Pairing info, BLE name etc) just like the norm firmware update. The user needs to do the re-configuration again after the firmware update. 
+
+- The user needs to take care of the integrity and responsibility to ensure security concerns.
+
+
+
+
 
 ## Introduction
 The general firmware update process in the RN4870/1 and BM70/71 PICtail board is carried out using an isupdate flashing tool. The instruction guide for the RN and BM devices discusses in detail about the firmware flashing using the system based flashing tool. Based on Microchip’s continuous improvement policy we are focused on collecting the feedback from the customers, to fulfill the field requirements to make the product more reliable to the end users. Taking into consideration about few practical requirements that demand for an embedded application to execute firmware update for these devices, we have developed an alternative solution to execute firmware update for the controller devices.
@@ -241,14 +256,4 @@ After completing the Flash write process for flash the firmware files, the host 
         - Copy the all the hex values and paste in a text file. 
         - Replace the existing text file in the project with this new text file. 
 
-# Guidelines to the end users
-                                  
--	The user needs to consider taking adequate backup of the existing firmware running on the controller. The demo application erases the current firmware and update it with the newly flashed firmware. 
--	Flashing the demo application to the host MCU will remove the existing application that resides in the MCU. The DFU Demo application showcases a proof-of-concept example that update the firmware on the BLE module. User needs to modify according to their requirement. 
-
-- The application flow is designed in such a way that it writes the firmware content into the flash memory and read back the content to make sure the writing action is executed successfully. The CRC check is not implemented either at the host MCU side nor at the BLE controller part to check whether the firmware is corrupted. 
-
-
-- Updating the existing firmware resides at the BLE controller will erase the configuration content (Pairing info, BLE name etc) just like the norm firmware update. The user needs to do the re-configuration again after the firmware update. 
-
-- The user needs to take care of the integrity and responsibility to ensure security concerns. 
+ 
