@@ -252,6 +252,7 @@ After completing the Flash write process for flash the firmware files, the host 
      3) Convert single binary file to a C array
         - The reference online tool can be used to convert the binary file to C array. 
         - Tool to Convert binary to c header file 
+               - https://renesasrulz.com/synergy/m/mediagallery/3193
                - https://www.netzmal.de/bin2hex/
         - Copy the all the hex values and paste in a text file. 
         - Replace the existing text file in the project with this new text file. 
