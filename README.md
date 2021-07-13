@@ -227,7 +227,7 @@ After completing the Flash write process for flash the firmware files, the host 
 
 ## Replacing the Firmware text file                         
 
-* The default application will have the latest public released firmware (V1.40). 
+* The default application will have the public released firmware (V1.28). 
 * 	User can use the same application to flash the older or newer version of firmware my replacing the firmware file (rn487x.txt) that comes along with the application.
 
       - In the MPLAB project, The firmware file (rn487x.txt) is located at Host_DFU_RN-BM\PIC32_NVM\Applications\DFU_Demo 
