@@ -1,0 +1,1 @@
+There is no 'c' file for this module - the header file contains all macros and inline functions.
